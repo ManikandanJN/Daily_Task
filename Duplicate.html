@@ -1,0 +1,14 @@
+<html>
+<script>
+var arr= [1,1,2,5,3,7,2,7];
+document.write("Duplicate Elements are: ");
+	for(let i=0;i<arr.length;i++){
+		for(let j=i+1;j<arr.length;j++){
+			if(arr[j]==arr[i])
+				document.write(arr[i]);
+		}
+		document.write(" ");
+	}
+
+</script>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+<script>
+const a = [1,3,1,5,7,3,1]
+
+function count_repeating(a){
+ let counts = {}
+
+ for(let i =0; i < a.length; i++){ 
+     if (counts[a[i]]){
+     counts[a[i]] += 1
+     } else {
+     counts[a[i]] = 1
+     }
+    } 
+document.write("Repeating Number is:<br>");
+
+    for (let prop in counts){
+        if (counts[prop] >= 2){
+            document.write( prop + " counted: " + counts[prop] + " times.<br>")
+        }
+		else 
+		document.write("Non-Repeating Number is: " + prop + "<br>");
+    }
+  console.log(counts);
+}
+
+count_repeating(a)
+
+</script>
+</head>
+</html>

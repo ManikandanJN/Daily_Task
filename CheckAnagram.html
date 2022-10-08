@@ -1,0 +1,25 @@
+<html>
+<script>
+function validAnagramOrNot(a, b) {
+        if (a.length !== b.length) return false;
+        const arr = {};
+        for (let i = 0; i < a.length; i++) {
+          let checkChar = a[i];
+          arr[checkChar] = (arr[checkChar] || 0) + 1;
+        }
+
+        for (let i = 0; i < b.length; i++) {
+          let checkChar = b[i];
+          if (!arr[checkChar]) {
+            return false;
+          } else {
+            arr[checkChar]--;
+          }
+        }
+        return true;
+      }
+	  
+      document.write(validAnagramOrNot("cat", "act"));
+      
+</script>
+</html>
